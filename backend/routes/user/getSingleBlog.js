@@ -1,9 +1,11 @@
-const User = require("../../models/User");
+const Blog = require("../../models/Blog");
 
 module.exports = async (req, res) => {
   try {
-    const data = await User.find().select({ userName: 1, imgUrl: 1 });
-
+    let { id } = req.query;
+    const data = await Blog.findById(id)
+      .populate("user", "userName imgUrl")
+      .populate("likes", "userName");
     res.status(200).json({ status: true, data });
   } catch (error) {
     if (error) throw error;

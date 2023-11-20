@@ -14,7 +14,7 @@ function Register() {
   const handleRegister = () => {
     setLoading(true);
     axios
-      .post("/blog/api/register", userData)
+      .post("/api/user/register", userData)
       .then((res) => {
         setLoading(false);
         navigate("/login");
