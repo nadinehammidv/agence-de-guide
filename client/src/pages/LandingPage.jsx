@@ -1,13 +1,9 @@
 import React from "react";
-import PublicNavbar from "../components/PublicNavbar";
 
-function Home() {
-  return (
-    <div>
-      <PublicNavbar />
-      <h1>Landing Page</h1>
-    </div>
-  );
+function LandingPage() {
+    return <div>
+      
+  </div>;
 }
 
-export default Home;
+export default LandingPage;
