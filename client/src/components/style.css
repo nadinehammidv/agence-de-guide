@@ -34,3 +34,46 @@ ul {
   font-size: large;
 }
 
+.images {
+  display: flex;
+  justify-content: center;
+  gap:20px
+
+}
+.card{
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  color: black;
+}
+.travelling {
+  background-image: url("https://cf.bstatic.com/xdata/images/hotel/max500/426184678.jpg?k=adfa0c2b826c062d95cee8af0ee96467e92ed87124f30297c1c943d7b48d8d35&o=");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  font-size: xx-large;
+  
+}
+.choose-guide{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZJJ-t50nWQfqQHjkc9StcgPSvPCIV_6l-A&usqp=CAU");
+ height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
