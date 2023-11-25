@@ -73,7 +73,7 @@ ul {
   background-size: cover;
    display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   font-size: xx-large;
 }
