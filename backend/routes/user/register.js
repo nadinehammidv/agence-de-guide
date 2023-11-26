@@ -2,7 +2,7 @@ const User = require("../../models/User");
 const bcrypt = require("bcrypt");
 
 module.exports = async (req, res) => {
-  let { userName, email, password } = req.body;
+  let { userName, email, password, phone } = req.body;
   try {
     //   Verify if the email is already used
     let existedUser = await User.findOne({ email });
@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
     const newUser = new User({
       userName,
       email,
+      phone,
       password: hashedPassword,
     });
     await newUser.save();

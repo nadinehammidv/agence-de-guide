@@ -1,4 +1,4 @@
-.register-subcontainer {
+/* .register-subcontainer {
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -126,4 +126,13 @@ h5 {
 }
 .thumb-up {
   cursor: pointer;
+} */
+.About{
+  font-size: larger;
+  display: flex;
+
+}
+.register-form {
+  width: 30%;
+  margin: auto;
 }

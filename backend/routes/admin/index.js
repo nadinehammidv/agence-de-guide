@@ -1,31 +1,34 @@
 const express = require("express");
 const route = express.Router();
+const multer = require("../../middlewares/multer");
+// Register router : /guide/api/admin/register
+route.post("/register", require("./register"));
 
-// Register router : /blog/api/admin/register
-// route.post("/register", require("./register"));
-
-// Login router : /blog/api/admin/login
+// Login router : /guide/api/admin/login
 route.post("/login", require("./login"));
 
-// Get blogs : /blog/api/admin/blogs
-route.get("/blogs", require("./getBlogs"));
+// Get Guides : /guide/api/admin/getguides
+route.get("/getGuides", require("./getGuides"));
+// Get Guides : /guide/api/admin/getUsers
+route.get("/getUsers", require("./getUsers"));
 
-// Get reported blogs : /blog/api/admin/reportedBlogs
-route.get("/reportedBlogs", require("./getReportedBlogs"));
+// Get Guide : /guide/api/admin/guide
+route.get("/guide", require("./getGuide"));
 
-// Get comments : /blog/api/admin/getComments
-route.get("/getComments", require("./getComments"));
+// Add Guide : /guide/api/admin/addGuide
+route.post("/addGuide", multer.single("photo"), require("./addGuide"));
 
-// Get users : /blog/api/admin/users
-route.get("/users", require("./getUsers"));
+// Update Guide : /guide/api/admin/updateGuide
+route.put("/updateGuide", require("./updateGuide"));
 
-// Delete blog : /blog/api/admin/deleteBlog
-route.delete("/deleteBlog", require("./deleteBlog"));
+// Update Photo Guide : /guide/api/admin/updatePhotoGuide
+route.put(
+  "/updatephotoGuide",
+  multer.single("photo"),
+  require("./updatePhotoGuide")
+);
 
-// Ban user : /blog/api/admin/banUser
-route.put("/banUser", require("./banUser"));
-
-// Unban user: /blog/api/admin/unbanUser
-route.put("/unbanUser", require("./unbanUser"));
+// Delete Guide : /guide/api/admin/deleteGuide
+route.delete("/deleteGuide/:id", require("./deleteGuide"));
 
 module.exports = route;

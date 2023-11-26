@@ -1,13 +1,8 @@
-const User = require("../../models/User");
+const Guide = require("../../models/Guide");
 
 module.exports = async (req, res) => {
   try {
-    const data = await User.find().select({
-      userName: 1,
-      imgUrl: 1,
-        phone: 1,
-      email:1,
-    });
+    const data = await Guide.find().populate("user", "userName imgUrl");
 
     res.status(200).json({ status: true, data });
   } catch (error) {
