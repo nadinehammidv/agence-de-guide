@@ -1,9 +1,10 @@
 import React from 'react'
 
-function avis() {
+function Avis() {
   return (
     
-    < div className = "avis" >
+    <div className = "Avis" >
+      <div>
       <h1> What Customers Say</h1>
       <h3> Our clients testimonials are the best proof of our high level of
         service </h3>
@@ -16,10 +17,11 @@ function avis() {
               <h4> nedia trabelsi</h4> 
         <img src=''/>   
       </div>
+      </div>
    
 
   );
    
 }
 
-export default avis
+export default Avis
