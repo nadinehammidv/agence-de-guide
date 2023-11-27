@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PublicNavbar from "../components/PublicNavbar";
 
 function About() {
   return (
-    <div>About</div>
-  )
+    <div>
+      <PublicNavbar />
+    </div>
+  );
 }
 
-export default About
+export default About;
